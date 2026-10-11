@@ -120,6 +120,13 @@ const TeamPage = forwardRef<HTMLHeadingElement>(
             <a href="https://github.com/inamjadoon/Chart-Voice">GitHub</a>.
           </p>
           <p>
+            See it in action in the{" "}
+            <a href="https://youtu.be/dvEyDGSpL7Y">
+              three-minute demo video on YouTube
+            </a>
+            .
+          </p>
+          <p>
             If you use a screen reader and try ChartVoice, we would love to hear
             what got in your way.{" "}
             <a href="https://github.com/inamjadoon/Chart-Voice/issues">

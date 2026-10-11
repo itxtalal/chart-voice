@@ -171,7 +171,8 @@ export default function App() {
             <p className="notice" role="note">
               <strong>Demo mode:</strong> results use sample data. Try the
               sample charts. An uploaded image shows the sample bar chart's
-              results, not its own.
+              results, not its own. To see it read a real chart,{" "}
+              <a href="https://youtu.be/dvEyDGSpL7Y">watch the demo video</a>.
             </p>
           )}
           {!isMockMode && modelReady === false && (
@@ -319,7 +320,8 @@ export default function App() {
           </p>
           <p>
             Built for Banana Hacks 2026 by Inam, Muhammad Talal Jamil and
-            Hasnain. <a href="#team">Meet the team</a>
+            Hasnain. <a href="#team">Meet the team</a> or{" "}
+            <a href="https://youtu.be/dvEyDGSpL7Y">watch the demo video</a>.
           </p>
         </div>
       </footer>

@@ -10,6 +10,12 @@ ChartVoice turns a picture of a bar, line or pie chart into a plain-language sum
 
 Built in one weekend at [Banana Hacks 2026](https://www.bananahacks.tech) by Inam, Talal, Hasnain and Adnan.
 
+**[Watch the demo video](https://youtu.be/dvEyDGSpL7Y)** (under 3 minutes) · **[Try it live](https://chart-voice.vercel.app/)** (demo mode with sample charts)
+
+<p align="center">
+  <a href="https://youtu.be/dvEyDGSpL7Y"><img src="https://img.youtube.com/vi/dvEyDGSpL7Y/maxresdefault.jpg" alt="Watch the ChartVoice demo video on YouTube" width="720"></a>
+</p>
+
 <p align="center">
   <img src="frontend/screenshots/results.png" alt="ChartVoice results page for a monthly sales bar chart. A summary says sales rose from 20 in January to 55 in May, with three large numbers below it: highest 55 in May, lowest 20 in January, trend increasing. Below are a Read summary aloud button and a box to ask questions." width="720">
 </p>

@@ -55,7 +55,7 @@ flowchart LR
 3. **Facts to words.** A language model on Groq turns the facts into a friendly summary. Every number it writes is checked against the table and the facts. If it invents one, we throw the text away and fall back to a simple template summary.
 4. **Words to something you can use.** The frontend turns all of this into speech, sound, a navigable table, a keyboard explorer and a redrawn chart.
 
-The API is documented in [docs/api-contract.md](docs/api-contract.md), and the running server has interactive docs at http://localhost:8000/docs.
+The API is documented in [docs/03-api-contract.md](docs/03-api-contract.md), and the running server has interactive docs at http://localhost:8000/docs.
 
 ### Why not just ask a chatbot?
 
@@ -103,7 +103,7 @@ The backend is a FastAPI app on http://localhost:8000. It calls Groq for online 
 ```bash
 cd backend
 python -m venv .venv
-.venv\Scriptsctivate            # macOS/Linux: source .venv/bin/activate
+.venv\Scripts\activate            # macOS/Linux: source .venv/bin/activate
 pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
 uvicorn app.main:app --port 8000
@@ -136,7 +136,8 @@ npm run test:a11y                 # terminal 2
 Chart-Voice/
 ├── backend/     FastAPI app: DePlot extraction, parsing, facts, checks, Groq LLM module
 ├── frontend/    React + TypeScript app (details in frontend/README.md)
-├── docs/        API contract for the frontend
+├── docs/        Team docs: brief, build plan, API contract, hackathon rules
+├── video/       Scripts that build the demo video from the real app
 └── eval/        Test charts with known data, and scripts that measure accuracy and speed
 ```
 
@@ -199,17 +200,19 @@ We'd rather you hear these from us:
 ChartVoice stands on a lot of other people's work:
 
 - [DePlot](https://huggingface.co/google/deplot) (`google/deplot`) by Google, Apache-2.0
-- Language and vision models served by [Groq](https://groq.com)
+- Models served by [Groq](https://groq.com): `qwen/qwen3.8-27b` reads the chart and writes the generic AI comparison, `openai/gpt-oss-120b` writes summaries and answers questions
 - [FastAPI](https://fastapi.tiangolo.com), MIT
 - [React](https://react.dev), [Vite](https://vite.dev) and [TypeScript](https://www.typescriptlang.org), MIT and Apache-2.0
 - [Chart.js](https://www.chartjs.org), MIT
 - [Atkinson Hyperlegible](https://www.brailleinstitute.org/freefont/) by the Braille Institute, SIL Open Font License, via [Fontsource](https://fontsource.org)
 - [axe-core](https://github.com/dequelabs/axe-core) (MPL-2.0) and [Playwright](https://playwright.dev) (Apache-2.0) for accessibility testing
 - Browser Web Speech API and Web Audio API for speech and sound
+- Demo video: voiceover by [Kokoro-82M](https://huggingface.co/hexgrad/Kokoro-82M) (hexgrad, Apache-2.0), recorded with Playwright and assembled with [FFmpeg](https://ffmpeg.org)
 
 ### AI tools used during the build
 
 As the hackathon rules ask, here is every AI tool we used:
 
 - **DePlot** and **Groq-hosted models** are part of the product, as described above.
+- **Kokoro-82M** spoke the narration in the demo video.
 - **Claude Code** (Anthropic) was used as a coding assistant.

@@ -11,12 +11,12 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
-const FRONTEND = path.resolve(HERE, "../Chart-Voice/frontend");
+const FRONTEND = path.resolve(HERE, "../frontend");
 const require = createRequire(path.join(FRONTEND, "package.json"));
 const { chromium } = require("playwright");
 
 const APP = process.env.APP_URL ?? "http://localhost:5173/";
-const CHART = path.resolve(HERE, "../Chart-Voice/backend/samples/charts/Bar chart.jpeg");
+const CHART = path.resolve(HERE, "../backend/samples/charts/Bar chart.jpeg");
 const FONTS = path.join(FRONTEND, "node_modules/@fontsource/atkinson-hyperlegible/files");
 const DATA = path.join(HERE, "data");
 const OUT = path.join(HERE, "out");

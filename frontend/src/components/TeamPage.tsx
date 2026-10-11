@@ -113,9 +113,10 @@ const TeamPage = forwardRef<HTMLHeadingElement>(
         <section className="card" aria-labelledby="project-h">
           <h2 id="project-h">The project</h2>
           <p>
-            ChartVoice reads the chart with Google's DePlot model, works out the
-            facts in code, and uses a language model on Groq only to put them
-            into plain words. The code is open on{" "}
+            ChartVoice reads the chart with a Groq vision model, or with
+            Google's DePlot model on your own computer when offline. It works
+            out the facts in code, and uses a language model on Groq only to put
+            them into plain words. The code is open on{" "}
             <a href="https://github.com/inamjadoon/Chart-Voice">GitHub</a>.
           </p>
           <p>

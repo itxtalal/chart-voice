@@ -30,7 +30,7 @@ npm run build && npm run preview  # terminal 1, serves on :4173
 npm run test:a11y                 # terminal 2
 ```
 
-Runs axe-core (WCAG 2.0, 2.1 and 2.2, level A and AA) in light, dark and high contrast (at the largest text size), before and after an analysis, and checks that the keyboard explorer announces points. Last run on Oct 10: all passed. Automated checks catch only part of the problems. Also test by hand with VoiceOver (Cmd + F5 on Mac) or NVDA on Windows.
+Runs axe-core (WCAG 2.0, 2.1 and 2.2, level A and AA) in light, dark and high contrast (at the largest text size), before and after an analysis, and checks that the keyboard explorer announces points. Last run on Oct 12: all 25 checks passed. Automated checks catch only part of the problems. Also test by hand with VoiceOver (Cmd + F5 on Mac) or NVDA on Windows.
 
 ## File map
 
@@ -58,6 +58,7 @@ src/
     ├── WarningBanner.tsx        trust warnings
     ├── AskChat.tsx              follow-up questions, suggested questions
     ├── ComparePanel.tsx         generic AI vs ChartVoice
+    ├── TeamPage.tsx             who built what, link to the GitHub repo
     ├── explore/
     │   ├── ChartExplorer.tsx    keyboard explorer + sonification controls
     │   └── useTones.ts          Web Audio tones, value to pitch (220 to 880 Hz)

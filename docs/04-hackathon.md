@@ -41,13 +41,13 @@ Recordings are sent to registered participants.
 
 ## Submission checklist
 
-- [ ] Project name
+- [x] Project name (ChartVoice, checked Oct 12: no other product uses it)
 - [ ] One-paragraph description, and a write-up of **500 words or less** (what you built and why)
 - [ ] Public GitHub repo link (check it opens while logged out)
 - [ ] Demo video, **3 minutes or less** (aim for 2:50), public link that works
 - [ ] Working demo: live URL or the recorded video
-- [ ] README credits: DePlot (`google/deplot`, Apache-2.0), Groq models used, ChartQA (if used for eval, check its license), Chart.js, Atkinson Hyperlegible font (SIL OFL), React, Vite, FastAPI, any other library
-- [ ] List of AI tools used during the build (including coding assistants)
+- [x] README credits: DePlot (`google/deplot`, Apache-2.0), Groq models used, ChartQA (if used for eval, check its license), Chart.js, Atkinson Hyperlegible font (SIL OFL), React, Vite, FastAPI, any other library
+- [x] List of AI tools used during the build (including coding assistants)
 - [ ] Every member has their own commits
 
 ## Judging

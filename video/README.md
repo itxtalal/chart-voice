@@ -17,7 +17,7 @@ The first recording against the real backend saves the API responses to `data/`.
 ```bash
 # terminal 1: backend (Inam's), with GROQ_API_KEY set, on :8000
 # terminal 2: frontend against the real backend
-cd ../Chart-Voice/frontend && VITE_USE_MOCK=false npm run dev
+cd ../frontend && VITE_USE_MOCK=false npm run dev
 
 # terminal 3
 ./build.sh            # record, render app speech, re-record in sync, assemble

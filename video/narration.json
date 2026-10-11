@@ -1,0 +1,17 @@
+[
+  {"id": "p1", "text": "Charts hold the numbers that matter, in news, textbooks and reports. But to a screen reader, a chart is just a picture. Ask what this one says, and you get one word."},
+  {"id": "p2", "text": "Blind and low-vision readers lose the data. And many sighted people struggle with charts too."},
+  {"id": "t1", "text": "This is ChartVoice. It lets anyone hear, read and check the real numbers inside a chart image."},
+  {"id": "u1", "text": "Let's give it that same chart. An image AI model reads the data straight from the pixels. Online, that's a Groq vision model. Offline, Google's DePlot runs on your laptop."},
+  {"id": "s1", "text": "First, the answer in plain words, with the highest, the lowest and the trend as big numbers. One click reads it aloud, and highlights each sentence."},
+  {"id": "l1", "text": "You can also hear the shape of the chart. Higher values play higher notes."},
+  {"id": "l2", "text": "Or move point by point with the arrow keys. Each point is announced."},
+  {"id": "a1", "text": "Still curious? Ask a question in plain words. The answer comes from your chart's numbers."},
+  {"id": "h1", "text": "Here's how it works. The image AI turns the picture into a data table. That's the heart of the project. Without it, there are no numbers."},
+  {"id": "h2", "text": "Then our own code computes the facts: highest, lowest, trend, biggest change. Plain arithmetic, never guessed. A language model only writes the sentences, and every number it uses is checked against the table."},
+  {"id": "v1", "text": "AI can still misread a chart, so ChartVoice lets you check its work. A sighted helper can compare your image with a chart redrawn from the numbers."},
+  {"id": "v2", "text": "Every number is in a real table, ready to download. And you can see what a generic AI says, side by side."},
+  {"id": "e1", "text": "We measured it. On eleven charts we generated with known data, the offline reader got sixty-five of sixty-seven values within five percent, and the highest value every time."},
+  {"id": "c1", "text": "And it's built for access from the start: keyboard first, screen reader announcements, high contrast, and text that scales up."},
+  {"id": "c2", "text": "Next, we want PDFs, more chart types, and a browser extension. ChartVoice. Hear, read and check the numbers inside any chart."}
+]

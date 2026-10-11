@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>ChartVoice video slides</title>
+<style>
+  @font-face { font-family: "Atkinson"; font-weight: 400; src: url("font-400.woff2") format("woff2"); }
+  @font-face { font-family: "Atkinson"; font-weight: 700; src: url("font-700.woff2") format("woff2"); }
+  :root {
+    --bg: #f7f5f0; --surface: #fff; --text: #15181e; --muted: #4a4f5a; --border-soft: #d9d6cf;
+    --primary: #1f4fbf; --on-primary: #fff; --accent: #e8a33d; --warn-bg: #fff4d6; --ok: #15803d;
+    --dark: #0f1217; --dark-text: #eef1f5;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 100%; height: 100%; }
+  body { font-family: "Atkinson", system-ui, sans-serif; background: var(--bg); color: var(--text); overflow: hidden; }
+  .slide { position: absolute; inset: 0; display: none; padding: 7vh 8vw; flex-direction: column; justify-content: center; }
+  .slide.on { display: flex; animation: zoom 30s linear both; }
+  @keyframes zoom { from { transform: scale(1); } to { transform: scale(1.04); } }
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s, transform .6s; }
+  .reveal.in { opacity: 1; transform: none; }
+  h1 { font-size: 7.5vw; line-height: 1; letter-spacing: -.02em; }
+  h2 { font-size: 3.6vw; line-height: 1.1; margin-bottom: 4vh; }
+  p { font-size: 2.1vw; line-height: 1.35; }
+  .muted { color: var(--muted); }
+  .logo { width: 9vw; height: 9vw; }
+
+  /* problem */
+  #problem { background: var(--dark); color: var(--dark-text); flex-direction: row; align-items: center; gap: 5vw; }
+  #problem img { width: 48vw; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+  #problem .side { flex: 1; }
+  .sr { background: #000; border: 3px solid #555; border-radius: 14px; padding: 2.2vh 2vw; font-size: 1.6vw; color: #ddd; margin-bottom: 5vh; }
+  .sr b { display: block; font-size: 1.1vw; letter-spacing: .12em; text-transform: uppercase; color: #9aa3b2; margin-bottom: 1vh; }
+  .sr span { font-size: 4vw; color: #fff; font-weight: 700; }
+  #problem p { color: var(--dark-text); }
+
+  /* title */
+  #title { align-items: center; text-align: center; }
+  #title .tag { font-size: 3vw; margin-top: 3vh; color: var(--muted); }
+  #title .event { margin-top: 6vh; font-size: 1.6vw; color: var(--muted); }
+
+  /* pipeline */
+  .flow { display: flex; align-items: stretch; gap: 1.2vw; }
+  .box { flex: 1; background: var(--surface); border: 3px solid var(--border-soft); border-radius: 16px; padding: 2.4vh 1.2vw; transition: all .5s; opacity: .45; }
+  .box h3 { font-size: 1.7vw; margin-bottom: 1vh; }
+  .box p { font-size: 1.25vw; color: var(--muted); }
+  .box .kind { display: inline-block; font-size: 1vw; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: .4vh .6vw; border-radius: 6px; margin-bottom: 1.4vh; background: var(--border-soft); }
+  .box.ai .kind { background: var(--primary); color: var(--on-primary); }
+  .box.code .kind { background: var(--ok); color: #fff; }
+  .box.lit { opacity: 1; border-color: var(--primary); box-shadow: 0 10px 30px rgba(31,79,191,.18); }
+  .arrow { align-self: center; font-size: 2.6vw; color: var(--muted); }
+  .note { margin-top: 5vh; }
+
+  /* results */
+  .stats { display: flex; gap: 3vw; margin-bottom: 5vh; }
+  .stat { flex: 1; background: var(--surface); border-radius: 16px; border: 3px solid var(--border-soft); padding: 3vh 2vw; }
+  .stat .big { font-size: 7vw; font-weight: 700; color: var(--primary); line-height: 1; }
+  .stat p { margin-top: 1.5vh; font-size: 1.7vw; }
+
+  /* closing */
+  #close .row { display: flex; gap: 4vw; align-items: flex-start; }
+  #close ul { list-style: none; padding: 0; font-size: 2.1vw; line-height: 1.6; }
+  #close li::before { content: "→ "; color: var(--primary); font-weight: 700; }
+  .credits { margin-top: 5vh; font-size: 1.3vw !important; color: var(--muted); }
+  .brand { display: flex; align-items: center; gap: 2vw; margin-bottom: 5vh; }
+  .brand h1 { font-size: 5vw; }
+</style>
+</head>
+<body>
+
+<section class="slide" id="problem">
+  <img src="chart.jpeg" alt="">
+  <div class="side">
+    <div class="sr reveal" data-step="1"><b>Screen reader</b><span>"image"</span></div>
+    <p class="reveal" data-step="2">Blind and low-vision readers lose the data.</p>
+    <p class="reveal" data-step="2" style="margin-top:2vh;color:#b6bdc8">Many sighted readers struggle too.</p>
+  </div>
+</section>
+
+<section class="slide" id="title">
+  <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+    <rect width="64" height="64" rx="15" fill="#1f4fbf"/>
+    <path d="M19 11h26a8 8 0 0 1 8 8v17a8 8 0 0 1-8 8H30l-10.5 9.5V44H19a8 8 0 0 1-8-8V19a8 8 0 0 1 8-8z" fill="#fff"/>
+    <rect x="18" y="29" width="7" height="9" rx="1.5" fill="#1f4fbf"/>
+    <rect x="28.5" y="23" width="7" height="15" rx="1.5" fill="#1f4fbf"/>
+    <rect x="39" y="17" width="7" height="21" rx="1.5" fill="#e8a33d"/>
+  </svg>
+  <h1 style="margin-top:4vh">ChartVoice</h1>
+  <p class="tag">Hear, read and check the numbers inside a chart.</p>
+  <p class="event">Banana Hacks 2026</p>
+</section>
+
+<section class="slide" id="pipeline">
+  <h2>How it works</h2>
+  <div class="flow">
+    <div class="box" data-lit="1"><span class="kind">Input</span><h3>Chart image</h3><p>Upload, paste or drop. Bar, line or pie.</p></div>
+    <div class="arrow">→</div>
+    <div class="box ai" data-lit="1"><span class="kind">Image AI</span><h3>Read the chart</h3><p>Groq vision online. Google DePlot offline, on your laptop.</p></div>
+    <div class="arrow">→</div>
+    <div class="box code" data-lit="2"><span class="kind">Our code</span><h3>Facts engine</h3><p>Highest, lowest, trend, biggest change. Plain arithmetic.</p></div>
+    <div class="arrow">→</div>
+    <div class="box ai" data-lit="2"><span class="kind">LLM + check</span><h3>Summary</h3><p>Every number checked against the table. Invented ones get rejected.</p></div>
+    <div class="arrow">→</div>
+    <div class="box" data-lit="2"><span class="kind">Outputs</span><h3>For everyone</h3><p>Speech, sound, keyboard explorer, table, redrawn chart.</p></div>
+  </div>
+  <p class="note muted reveal" data-step="2">Numbers come from the image and from code, never from a guess.</p>
+</section>
+
+<section class="slide" id="results">
+  <h2>Measured, not claimed</h2>
+  <div class="stats">
+    <div class="stat"><div class="big">97%</div><p>of values within 5%<br><span class="muted">65 of 67</span></p></div>
+    <div class="stat"><div class="big">11 / 11</div><p>highest value found correctly</p></div>
+  </div>
+  <p class="muted">11 bar, line and pie charts we generated with known data. Offline reader (DePlot) on a laptop CPU. Real-world charts will be harder.</p>
+</section>
+
+<section class="slide" id="close">
+  <div class="brand">
+    <svg class="logo" style="width:6vw;height:6vw" viewBox="0 0 64 64" aria-hidden="true">
+      <rect width="64" height="64" rx="15" fill="#1f4fbf"/>
+      <path d="M19 11h26a8 8 0 0 1 8 8v17a8 8 0 0 1-8 8H30l-10.5 9.5V44H19a8 8 0 0 1-8-8V19a8 8 0 0 1 8-8z" fill="#fff"/>
+      <rect x="18" y="29" width="7" height="9" rx="1.5" fill="#1f4fbf"/>
+      <rect x="28.5" y="23" width="7" height="15" rx="1.5" fill="#1f4fbf"/>
+      <rect x="39" y="17" width="7" height="21" rx="1.5" fill="#e8a33d"/>
+    </svg>
+    <h1>ChartVoice</h1>
+  </div>
+  <div class="row">
+    <div style="flex:1">
+      <h2 style="font-size:2.4vw;margin-bottom:2vh">Next</h2>
+      <ul><li>Charts inside PDFs</li><li>More chart types</li><li>A browser extension</li></ul>
+    </div>
+    <div style="flex:1">
+      <h2 style="font-size:2.4vw;margin-bottom:2vh">Team</h2>
+      <ul><li>Inam: backend, chart reading</li><li>Talal: frontend, accessibility</li><li>Hasnain: AI summaries, questions</li></ul>
+    </div>
+  </div>
+  <p class="credits">Built with Groq, Google DePlot, React, Vite, FastAPI, Chart.js and Atkinson Hyperlegible. Voiceover: Kokoro, an open-source voice model.</p>
+</section>
+
+<script>
+  // Called by the recorder: show(name) switches slide, step(n) reveals parts.
+  function show(name) {
+    document.querySelectorAll('.slide').forEach((s) => s.classList.toggle('on', s.id === name));
+    step(0);
+  }
+  function step(n) {
+    document.querySelectorAll('.slide.on [data-step]').forEach((el) => el.classList.toggle('in', +el.dataset.step <= n));
+    document.querySelectorAll('.slide.on [data-lit]').forEach((el) => el.classList.toggle('lit', +el.dataset.lit === n));
+  }
+  show(location.hash.slice(1) || 'title');
+</script>
+</body>
+</html>

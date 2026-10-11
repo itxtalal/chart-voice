@@ -1,0 +1,5 @@
+{
+  "description": "The image shows a bar chart titled 'Monthly sales 2025'. It has five bars for January to May. The bars generally get taller from left to right, with the tallest bar in May.",
+  "model": "generic-vision-model",
+  "timing_ms": 1400
+}

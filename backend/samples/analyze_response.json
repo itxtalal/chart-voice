@@ -1,0 +1,32 @@
+{
+  "chart_type": "bar",
+  "title": "Monthly sales 2025",
+  "table": {
+    "columns": ["Month", "Sales"],
+    "rows": [["Jan", 20], ["Feb", 25], ["Mar", 40], ["Apr", 38], ["May", 55]]
+  },
+  "facts": {
+    "series": [
+      {
+        "name": "Sales",
+        "max": {"label": "May", "value": 55},
+        "min": {"label": "Jan", "value": 20},
+        "first": {"label": "Jan", "value": 20},
+        "last": {"label": "May", "value": 55},
+        "change_abs": 35,
+        "change_pct": 175.0,
+        "trend": "increasing",
+        "biggest_rise": {"from": "Apr", "to": "May", "change": 17},
+        "biggest_drop": {"from": "Mar", "to": "Apr", "change": -2},
+        "total": 178,
+        "shares": null
+      }
+    ]
+  },
+  "summary": "Sales rose from 20 in Jan to 55 in May. The highest month was May (55) and the lowest was Jan (20). The biggest jump was from Apr to May (+17).",
+  "explanation": "This bar chart shows sales for each month from January to May 2025. Overall, sales more than doubled over these five months. There was one small dip in April, but sales recovered strongly in May.",
+  "text_source": "llm",
+  "extractor": "vision",
+  "warnings": [],
+  "timing_ms": {"extract": 6200, "llm": 900, "total": 7300}
+}

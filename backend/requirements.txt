@@ -1,0 +1,28 @@
+# Install PyTorch first (CPU-only build, smaller download):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# Then:
+#   pip install -r requirements.txt
+
+# API server
+fastapi
+uvicorn[standard]
+python-multipart
+pydantic>=2
+
+# Images and data
+pillow
+numpy
+pandas
+
+# Chart extraction model (DePlot)
+transformers
+sentencepiece
+
+# Language model (Groq)
+groq
+python-dotenv
+
+# Tests and evaluation charts
+pytest
+httpx
+matplotlib

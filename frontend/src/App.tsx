@@ -169,7 +169,9 @@ export default function App() {
 
           {isMockMode && (
             <p className="notice" role="note">
-              <strong>Demo mode:</strong> results use sample data.
+              <strong>Demo mode:</strong> results use sample data. Try the
+              sample charts. An uploaded image shows the sample bar chart's
+              results, not its own.
             </p>
           )}
           {!isMockMode && modelReady === false && (
